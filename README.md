@@ -17,7 +17,7 @@ $ pipenv install
 
 ## Запуск CLI
 ```
-$ pipenv shell && python cli.py %AIRTABLE_API_KEY%
+$ pipenv shell && python cli.py
 ```
 
 ## Запуск API
