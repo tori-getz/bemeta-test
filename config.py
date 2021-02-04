@@ -2,15 +2,16 @@
 # Config file
 
 # PostgreSQL
-DATABASE_NAME = ""
-DATABASE_USER = ""
-DATABASE_PASSWORD = ""
-DATABASE_HOST = ""
+DATABASE_HOST = "localhost"
+DATABASE_PORT = 5432
+DATABASE_USER = "postgres"
+DATABASE_PASSWORD = "postgres"
+DATABASE_NAME = "postgres"
 
 # Airtable
-AIRTABLE_BASE_KEY = ""
-AIRTABLE_TABLE_NAME + ""
 
+AIRTABLE_BASE_KEY = "appTJd9ORLNxTkGTk"
+AIRTABLE_TABLE_NAME = "psycho"
 
 #
 # Лучше конечно все эти данные хранить в системных переменных.

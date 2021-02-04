@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 flask = "*"
 loguru = "*"
+airtable-python-wrapper = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
