@@ -7,7 +7,7 @@ DATABASE_PORT = 5432
 DATABASE_USER = "postgres"
 DATABASE_PASSWORD = "postgres"
 DATABASE_NAME = "postgres"
-DATABASE_TABLE="doctors"
+DATABASE_TABLE="public.airtable"
 
 # Airtable
 
