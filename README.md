@@ -17,12 +17,14 @@ $ pipenv install
 
 ## Запуск CLI
 ```
-$ pipenv shell && python cli.py
+$ pipenv shell
+$ python cli.py
 ```
 
 ## Запуск API
 ```
-$ pipenv shell && python server.py
+$ pipenv shell
+$ python server.py
 ```
 
 ## Запуск клиента

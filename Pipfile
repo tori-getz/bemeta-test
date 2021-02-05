@@ -8,6 +8,7 @@ flask = "*"
 loguru = "*"
 airtable-python-wrapper = "*"
 psycopg2-binary = "*"
+flask-cors = "*"
 
 [dev-packages]
 
