@@ -1,34 +1,20 @@
 <template>
-  <div id="app">
-    <ViewDoctor :photo="photo" :name="name" :methods="methods" />
+  <div id="app" v-if="loaded">
+    <router-view />
   </div>
+  <h1 v-else> Loading... </h1>
 </template>
 
 <script>
-import ViewDoctor from './components/ViewDoctor.vue'
-import Axios from "axios"
-
 export default {
   name: 'App',
-  data: () => {
-    return {
-      name: "",
-      photo: "",
-      methods: []
+  computed: {
+    loaded () {
+      return this.$store.getters.LOADED;
     }
   },
-  created: () => {
-    Axios.
-      get('http://localhost:5000/doctors/recvKqu0DhZ1fBG1h')
-      .then(res => {
-        console.log(res.data);
-        this.name = res.data.fields["Имя"];
-        this.methods = res.data.fields["Методы"];
-        this.photo = res.data.fields["Фотография"][0].url;
-      });
-  },
-  components: {
-    ViewDoctor
+  mounted () {
+    this.$store.dispatch("GET_DOCTORS")
   }
 }
 </script>

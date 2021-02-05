@@ -62,12 +62,20 @@
 </style>
 
 <script>
+import { findDoctor } from "../helpers/doctors"
+
 export default {
     name: "ViewDoctor",
-    props: {
-        photo: String,
-        name: String,
-        methods: Array
+    computed: {
+        name () {
+            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).name
+        },
+        methods () {
+            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).methods
+        },
+        photo () {
+            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).photo
+        }
     }
 }
 </script>
