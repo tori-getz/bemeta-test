@@ -1,10 +1,8 @@
 from doctors import *
 from config import *
 
-import sys
 import psycopg2 # Когда я прочитал что можно использовать SQLAlchemy было поздно...
 import json
-import datetime
 from airtable import Airtable
 from loguru import logger
 

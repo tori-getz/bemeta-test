@@ -1,7 +1,7 @@
 from config import *
 
 import json
-import psycopg2
+import psycopg2 # Когда я узнал что желательно было использовать SQLAlchemy - было поздно :(
 import datetime
 import atexit
 from loguru import logger

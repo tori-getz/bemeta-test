@@ -32,5 +32,5 @@ $ python server.py
 
 ## Запуск клиента
 ```
-$ cd client && npm start
+$ cd client && npm run serve
 ```
