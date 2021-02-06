@@ -2,16 +2,29 @@
     <center>
         <div id="wrapper">
             <div id="about">
-                <img id="image" width="35%" :src="photo"/>
-                <h1>{{ name }}</h1>
+                <img id="image" width="35%" :src="doctor.photo"/>
+                <h1>{{ doctor.name }}</h1>
                 <h2 id="methods_header"> Методы </h2>
-                <div id="methods" v-for="method in methods" :key="method">
+                <div id="methods" v-for="method in doctor.methods" :key="method">
                     <p>{{ method }}</p>
                 </div>
             </div>
         </div>
     </center>
 </template>
+
+<script>
+import { findDoctor } from "../helpers/doctors"
+
+export default {
+    name: "ViewDoctor",
+    computed: {
+        doctor () {
+            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id)
+        }
+    }
+}
+</script>
 
 <style>
 #about {
@@ -46,22 +59,3 @@
     padding-right: 10px;
 }
 </style>
-
-<script>
-import { findDoctor } from "../helpers/doctors"
-
-export default {
-    name: "ViewDoctor",
-    computed: {
-        name () {
-            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).name
-        },
-        methods () {
-            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).methods
-        },
-        photo () {
-            return findDoctor(this.$store.getters.DOCTORS, this.$route.params.id).photo
-        }
-    }
-}
-</script>
