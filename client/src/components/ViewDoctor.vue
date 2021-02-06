@@ -1,10 +1,8 @@
 <template>
     <center>
         <div id="wrapper">
-            <div id="image-block">
-                <img id="image" width="100%" :src="photo"/>
-            </div>
             <div id="about">
+                <img id="image" width="35%" :src="photo"/>
                 <h1>{{ name }}</h1>
                 <h2 id="methods_header"> Методы </h2>
                 <div id="methods" v-for="method in methods" :key="method">
@@ -16,24 +14,12 @@
 </template>
 
 <style>
-#wrapper {
-    width: 55%;
-    display: flex;
-    flex-direction: fow;
-}
-
 #about {
     text-align: left;
-    width: 80%;
-    float: right;
 }
 
-#image-block {
-    display: flex;
-    flex-direction: colum;
-    justify-content: center;
+#about img {
     float: left;
-    width: 70%;
     margin-right: 20px;
 }
 

@@ -6,6 +6,7 @@ import ListDoctors from "../components/ListDoctors"
 
 Vue.use(VueRouter)
 
+// Роутер может быть настолько прост в использовании???
 const routes = [
     { path: "/", component: ListDoctors },
     { path: "/doctor/:id", component: ViewDoctor }
