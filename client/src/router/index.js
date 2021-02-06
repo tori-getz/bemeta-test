@@ -12,4 +12,7 @@ const routes = [
     { path: "/doctor/:id", component: ViewDoctor }
 ]
 
-export const router = new VueRouter({ routes })
+export const router = new VueRouter({
+    routes,
+    mode: "history"
+})
