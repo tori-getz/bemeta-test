@@ -29,8 +29,8 @@ export const store = new Vuex.Store({
     actions: {
         GET_DOCTORS: async (context) => {
             let { data } = await Axios.get(`${config.API_URL}/doctors/`);
-
-            context.commit("LOAD_DOCTORS", data);
+            
+            context.commit("LOAD_DOCTORS", JSON.parse(data))
         }
     }
 })

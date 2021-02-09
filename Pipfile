@@ -9,6 +9,7 @@ loguru = "*"
 airtable-python-wrapper = "*"
 psycopg2-binary = "*"
 flask-cors = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 
